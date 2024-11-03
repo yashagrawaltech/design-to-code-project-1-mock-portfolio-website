@@ -7,9 +7,12 @@ function displayheaderOverlay() {
 
   const disableScroll = () => {
     document.body.style.overflow = "hidden";
+    document.body.style.pointerEvents = "none";
+    navOverlay.style.pointerEvents = "auto"
   };
   const enableScroll = () => {
     document.body.style.overflow = "";
+    document.body.style.pointerEvents = "auto";
   };
 
   openBtn.addEventListener("click", () => {
