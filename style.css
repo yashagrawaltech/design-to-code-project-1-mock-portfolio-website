@@ -11,3 +11,40 @@ body {
   height: 100%;
   background-color: #0f110f;
 }
+
+.testimonials-section > .overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 17, 15, 0.8) 15.9%,
+    rgba(15, 17, 15, 0) 57.69%,
+    #0f110f 100%
+  );
+}
+
+.testimonials-section > .container-scroller > .content {
+  animation: marquee 30s linear infinite;
+  animation-delay: calc(30s * -1);
+}
+
+.testimonials-section > .container-scroller > .content-2 {
+  animation: marquee2 30s linear infinite;
+  animation-delay: calc(30s / -2);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-200%);
+  }
+}
