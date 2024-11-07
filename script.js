@@ -8,7 +8,7 @@ function displayheaderOverlay() {
   const disableScroll = () => {
     document.body.style.overflow = "hidden";
     document.body.style.pointerEvents = "none";
-    navOverlay.style.pointerEvents = "auto"
+    navOverlay.style.pointerEvents = "auto";
   };
   const enableScroll = () => {
     document.body.style.overflow = "";
@@ -84,6 +84,79 @@ function handleNavAppearance() {
 
   window.addEventListener("scroll", handleScroll);
 }
+
+// Animations
+
+gsap.from(".hero > .hero-part-3 > .card", {
+  y: "20%",
+  ease: "power4",
+  duration: 0.5,
+  scrollTrigger: {
+    trigger: ".hero > .hero-part-3 > .card",
+    start: "top bottom",
+    scrub: 1,
+  },
+});
+
+gsap.from(".portfolio-section > .card", {
+  y: "20%",
+  ease: "power4",
+  duration: 0.8,
+  stagger: 0.4,
+  scrollTrigger: {
+    trigger: ".portfolio-section > .card",
+    start: "top bottom",
+    scrub: 1,
+  },
+});
+
+gsap.from(".projects-section > .content", {
+  y: "20%",
+  ease: "power4",
+  duration: 0.8,
+  stagger: 0.4,
+  scrollTrigger: {
+    trigger: ".projects-section > .content",
+    start: "top bottom",
+    scrub: 1,
+  },
+});
+
+gsap.from(".get-free-quote-section > .content", {
+  y: "20%",
+  ease: "power4",
+  duration: 0.8,
+  stagger: 0.4,
+  scrollTrigger: {
+    trigger: ".get-free-quote-section > .content",
+    start: "top bottom",
+    scrub: 1,
+  },
+});
+
+gsap.from(".how-it-works-section > .content", {
+  y: "20%",
+  ease: "power4",
+  duration: 0.8,
+  stagger: 0.4,
+  scrollTrigger: {
+    trigger: ".how-it-works-section > .content",
+    start: "top bottom",
+    scrub: 1,
+  },
+});
+
+gsap.from(".cta-section > .content", {
+  y: "20%",
+  ease: "power4",
+  duration: 0.8,
+  stagger: 0.4,
+  scrollTrigger: {
+    trigger: ".cta-section > .content",
+    start: "top bottom",
+    scrub: 1,
+  },
+});
 
 handleNavAppearance();
 displayheaderOverlay();
